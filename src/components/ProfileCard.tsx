@@ -1,4 +1,5 @@
 import styles from "./ProfileCard.module.css";
+import Social from "./Social";
 
 type ProfileCardProps = {
   name: string;
@@ -12,6 +13,7 @@ function ProfileCard({ name, avatar, bio }: ProfileCardProps) {
       <img src={avatar} alt={`${name}'s avatar`} />
       <h2>{name}</h2>
       <p>{bio}</p>
+      <Social />
     </div>
   );
 }
