@@ -1,19 +1,7 @@
-import { useState } from "react";
-
+import useCounter from "../hooks/useCounter";
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const { count, handleReset, handleDecrement, handleIncrement } = useCounter();
 
-  const handleReset = () => {
-    setCount(0);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
   return (
     <div
       style={{
@@ -26,7 +14,6 @@ const Counter = () => {
       <button onClick={handleDecrement}>Min</button>
       <p>{count}</p>
       <button onClick={handleIncrement}>Add</button>
-
       <button onClick={handleReset}>Reset</button>
     </div>
   );
