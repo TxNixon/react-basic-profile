@@ -5,15 +5,13 @@ import dislike from "../assets/dislike.png";
 
 const Counter = () => {
   const { count, handleIncrementBy, handleDecrement } = useCounter();
-  const [isLiked, setIsLiked] = useState(false); // Tracks if the button is currently "Liked"
+  const [isLiked, setIsLiked] = useState(false);
 
   const toggleLike = () => {
     if (isLiked) {
-      // If already liked, decrement the count and toggle to "Not Liked"
       handleDecrement();
       setIsLiked(false);
     } else {
-      // If not liked, increment the count and toggle to "Liked"
       handleIncrementBy({ value: 1 });
       setIsLiked(true);
     }
@@ -28,7 +26,7 @@ const Counter = () => {
         alignItems: "center",
       }}
     >
-      <p>{count}</p>
+      <p style={{ fontSize: "20px", marginTop: "20px" }}>{count}</p>
       <button
         onClick={toggleLike}
         style={{ background: "none", border: "none" }}
@@ -37,13 +35,13 @@ const Counter = () => {
           <img
             src={dislike}
             alt="Dislike"
-            style={{ width: "30px", height: "30px" }}
+            style={{ width: "20px", height: "20px" }}
           />
         ) : (
           <img
             src={like}
             alt="Like"
-            style={{ width: "30px", height: "30px" }}
+            style={{ width: "20px", height: "20px" }}
           />
         )}
       </button>
