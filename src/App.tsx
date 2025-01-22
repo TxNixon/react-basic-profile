@@ -1,17 +1,27 @@
 import ProfileCard from "./components/ProfileCard";
 import profileImage from "./assets/Profile.png";
+import { Routes, Route } from "react-router";
+import TermsPage from "./pages/TermsPage";
+import NotFoundPage from "./pages/NotFound";
+import ProductDetailPage from "./pages/ProductDetailPage";
 function App() {
   return (
     <>
-      <div className="app-container">
-        <main>
-          <ProfileCard
-            name="Admojo Cahyo Santoso Tan"
-            avatar={profileImage}
-            bio="I love exploring new technologies and finding creative ways to make life easier. Always looking for innovative ideas to grow and connect."
-          />
-        </main>
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProfileCard
+              name="Admojo Cahyo Santoso Tan"
+              avatar={profileImage}
+              bio="I love exploring new tech and stuff"
+            />
+          }
+        />
+        <Route path="/produk/:produkName" element={<ProductDetailPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   );
 }
