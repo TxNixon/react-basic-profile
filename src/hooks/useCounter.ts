@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+type IncrementProps = {
+  value: number;
+};
+
 const useCounter = () => {
   const [count, setCount] = useState(0);
 
@@ -15,7 +19,17 @@ const useCounter = () => {
     setCount((prevCount) => prevCount + 1);
   };
 
-  return { count, handleReset, handleDecrement, handleIncrement };
+  const handleIncrementBy = ({ value }: IncrementProps) => {
+    setCount((prevCount) => prevCount + value);
+  };
+
+  return {
+    count,
+    handleReset,
+    handleDecrement,
+    handleIncrement,
+    handleIncrementBy,
+  };
 };
 
 export default useCounter;

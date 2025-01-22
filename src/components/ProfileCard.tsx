@@ -2,6 +2,7 @@ import styles from "./ProfileCard.module.css";
 import Social from "./Social";
 import moon from "../assets/moon.svg";
 import sun from "../assets/sun.svg";
+import Counter from "./Counter";
 
 type ProfileCardProps = {
   name: string;
@@ -17,6 +18,8 @@ function ProfileCard({ name, avatar, bio }: ProfileCardProps) {
       <img className={styles.avatar} src={avatar} alt={`${name}'s avatar`} />
       <h2>{name}</h2>
       <p>{bio}</p>
+      <Counter />
+
       <Social />
     </div>
   );

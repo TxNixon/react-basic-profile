@@ -2,13 +2,11 @@
 import Footer from "./components/Footer";
 import ProfileCard from "./components/ProfileCard";
 import profileImage from "./assets/Profile.png";
-import Counter from "./components/Counter";
 function App() {
   return (
     <>
       <div className="app-container">
         <main>
-          <Counter />
           <ProfileCard
             name="Admojo Cahyo Santoso Tan"
             avatar={profileImage}
