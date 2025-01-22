@@ -15,19 +15,24 @@ const DaynNight = ({ onToggle }: { onToggle: () => void }) => {
       onClick={handleClick}
       style={{
         padding: "10px",
+        marginBottom: "10px",
         cursor: "pointer",
-        borderRadius: "5px",
+        position: "absolute",
+        right: "10px",
+        top: "10px",
+        display: "flex",
+        borderRadius: "10px",
         backgroundColor: isDay ? "#f39c12" : "#2c3e50",
         color: isDay ? "#fff" : "#ecf0f1",
-        display: "flex",
         alignItems: "center",
         gap: "10px",
+        border: "none",
       }}
     >
       <img
         src={isDay ? sun : moon}
         alt={isDay ? "Sun" : "Moon"}
-        style={{ width: "20px", height: "20px", textAlign: "right" }}
+        style={{ width: "20px", height: "20px" }}
       />
     </button>
   );
