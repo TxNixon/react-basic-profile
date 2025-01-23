@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router";
 import TermsPage from "./pages/TermsPage";
 import NotFoundPage from "./pages/NotFound";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ProductListPage from "./pages/ProductListPage";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         />
         <Route path="/produk/:produkName" element={<ProductDetailPage />} />
         <Route path="/terms" element={<TermsPage />} />
+        <Route path="/ProductListPage" element={<ProductListPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
