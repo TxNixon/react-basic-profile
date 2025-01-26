@@ -5,6 +5,8 @@ import TermsPage from "./pages/TermsPage";
 import NotFoundPage from "./pages/NotFound";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductListPage from "./pages/ProductListPage";
+import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
 function App() {
   return (
     <>
@@ -23,6 +25,8 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/ProductListPage" element={<ProductListPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </>
   );
