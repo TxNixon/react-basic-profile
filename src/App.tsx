@@ -1,7 +1,4 @@
-import ProfileCard from "./components/ProfileCard";
-import profileImage from "./assets/Profile.png";
 import { Routes, Route } from "react-router";
-import TermsPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFound";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductListPage from "./pages/ProductListPage";
@@ -20,7 +17,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </>
   );

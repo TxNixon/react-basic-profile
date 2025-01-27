@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router"; // Correct import from react-router-dom
+import { useNavigate } from "react-router";
 import styles from "./ProductCard.module.css";
 
 type ProductCardProps = {
@@ -14,13 +14,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   const handleCardClick = () => {
     navigate(`/produk/${product.name}`);
+    console.log(product.name);
   };
 
   return (
     <div onClick={handleCardClick} className={styles.productCard}>
       <img src={product.image} alt={product.name} />
-      <p>{product.price}</p>
-      <h2>{product.name}</h2>
+      <p>Rp.{product.price}</p>
+      <h2>Name : {product.name}</h2>
     </div>
   );
 };
